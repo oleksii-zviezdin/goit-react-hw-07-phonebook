@@ -1,7 +1,7 @@
 import { Form, Span, AddButton, Label, Input } from './ContactForm.styled';
 import { useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getItems } from 'redux/selector';
+import { selectItems } from 'redux/selector';
 import { addContact } from 'redux/operation';
 import { toast } from 'react-toastify';
 
@@ -11,7 +11,7 @@ export const ContactForm = () => {
   const dispatch = useDispatch();
 
   const formReff = useRef(null);
-  const contacts = useSelector(getItems);
+  const contacts = useSelector(selectItems);
 
   const handleChange = e => {
     const { name, value } = e.currentTarget;

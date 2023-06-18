@@ -1,7 +1,7 @@
 import { ContactForm, ContactList, Notification, Filter } from './index';
 import { Container, FormTitle, ContnactsTitle, Error } from './App.styled';
 import { useDispatch, useSelector } from 'react-redux';
-import { getError, getIsLoading, getItems } from 'redux/selector';
+import { selectError, selectIsLoading, selectItems } from 'redux/selector';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -15,9 +15,9 @@ export const App = () => {
     dispatch(fetchContact());
   }, [dispatch]);
 
-  const items = useSelector(getItems);
-  const isError = useSelector(getError);
-  const isLoading = useSelector(getIsLoading);
+  const items = useSelector(selectItems);
+  const isError = useSelector(selectError);
+  const isLoading = useSelector(selectIsLoading);
 
   return (
     <>
