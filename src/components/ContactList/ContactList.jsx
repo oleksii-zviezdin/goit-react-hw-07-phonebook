@@ -11,7 +11,7 @@ export const ContactList = () => {
   const filteredContacts = getFilteredContacts(filter, contacts);
   return (
     <ContnactsList>
-      {filteredContacts?.lenght === 0 && (
+      {filteredContacts?.length === 0 && (
         <div style={{ textAlign: 'center' }}>
           <p>Sorry, but we did not find anything for this query</p>
           <p style={{ fontWeight: 'bold', fontSize: '24px' }}>"{filter}"</p>

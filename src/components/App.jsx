@@ -18,13 +18,13 @@ export const App = () => {
     <Container>
       <FormTitle>Phonebook</FormTitle>
       <ContactForm />
-      {items?.lenght !== 0 && <Filter />}
-      {items?.lenght === 0 && (
+      {items?.length !== 0 && <Filter />}
+      {items?.length === 0 && (
         <Notification
           message={'This is where your added contacts will be displayed'}
         />
       )}
-      {items?.lenght !== 0 && (
+      {items?.length !== 0 && (
         <>
           <ContnactsTitle>Contacts</ContnactsTitle>
           <ContactList contacts={items} />
