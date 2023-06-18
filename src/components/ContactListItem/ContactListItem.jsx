@@ -5,8 +5,9 @@ import { deleteContact } from 'redux/operation';
 
 export const ContactListItem = ({ id, name, tel }) => {
   const dispatch = useDispatch();
+  const contactNameAndId = { id, name };
   const hanldeDelete = () => {
-    dispatch(deleteContact(id));
+    dispatch(deleteContact(contactNameAndId));
   };
   return (
     <ContactItem>
@@ -14,7 +15,7 @@ export const ContactListItem = ({ id, name, tel }) => {
         {name}: <span>{tel}</span>
       </p>
       <RemoveButton type="button" onClick={hanldeDelete}>
-        Revome contact
+        Revome
       </RemoveButton>
     </ContactItem>
   );

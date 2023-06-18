@@ -1,33 +1,35 @@
-import styled from '@emotion/styled'
+import styled from '@emotion/styled';
 
 export const ContactItem = styled.li`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 10px 20px;
+  box-sizing: border-box;
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 20px;
 
-    outline: 1px solid #0460f5;
-    border-radius: 8px;
-    
-    box-shadow: 0 0 8px 2px #6279ff94;
-`
+  outline: 1px solid #0460f5;
+  border-radius: 8px;
+
+  box-shadow: 0 0 8px 2px #6279ff94;
+`;
 export const RemoveButton = styled.button`
-    width: 150px;
-    height: 32px;
-    
-    border-radius: 8px;
-    border: none;
+  width: 100px;
+  height: 32px;
 
-    background-color: #0460f5;
-    color:rgb(18, 8, 42);
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 250ms, box-shadow 250ms;
+  border-radius: 8px;
+  border: none;
 
-    &:hover,
-    &:focus {
-        background-color: #2170ef;
-        box-shadow: 0 0 8px 2px #6279ff;
-    }
-`
+  background-color: #0460f5;
+  color: rgb(18, 8, 42);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 250ms, box-shadow 250ms;
+
+  &:hover,
+  &:focus {
+    background-color: #2170ef;
+    box-shadow: 0 0 8px 2px #6279ff;
+  }
+`;

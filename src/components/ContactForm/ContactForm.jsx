@@ -3,6 +3,7 @@ import { useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getItems } from 'redux/selector';
 import { addContact } from 'redux/operation';
+import { toast } from 'react-toastify';
 
 export const ContactForm = () => {
   const [name, setName] = useState('');
@@ -32,9 +33,9 @@ export const ContactForm = () => {
     );
 
     if (isIncludeContactName) {
-      return alert(`"${name}" is already in contacts`);
+      return toast.warning(`"${name}" is already in contacts`);
     } else if (isIncludeContactNumber) {
-      return alert(`"${phone}" is already in contacts`);
+      return toast.warning(`"${phone}" is already in contacts`);
     } else {
       const contact = { name, phone };
       dispatch(addContact(contact));
