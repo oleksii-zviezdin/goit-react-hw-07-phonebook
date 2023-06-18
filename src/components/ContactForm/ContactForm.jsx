@@ -2,8 +2,7 @@ import { Form, Span, AddButton, Label, Input } from './ContactForm.styled';
 import { useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getItems } from 'redux/selector';
-import fetchContact, { addContact } from 'redux/operation';
-import { nanoid } from '@reduxjs/toolkit';
+import { addContact } from 'redux/operation';
 
 export const ContactForm = () => {
   const [name, setName] = useState('');
@@ -37,7 +36,7 @@ export const ContactForm = () => {
     } else if (isIncludeContactNumber) {
       return alert(`"${phone}" is already in contacts`);
     } else {
-      const contact = { name, phone, id: nanoid() };
+      const contact = { name, phone };
       dispatch(addContact(contact));
       setName('');
       setPhone('');
