@@ -24,7 +24,7 @@ export const App = () => {
           message={'This is where your added contacts will be displayed'}
         />
       )}
-      {items.length !== 0 && (
+      {items?.length !== 0 && (
         <>
           <ContnactsTitle>Contacts</ContnactsTitle>
           <ContactList contacts={items} />
